@@ -16,5 +16,10 @@ pipeline {
       }
     }
   }
+  post {
+    success {
+      archiveArtifacts artifacts 'rectangle.jar', fingerprints: true
+    }
+  }
 }
 
